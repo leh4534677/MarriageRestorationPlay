@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marriage Restoration Playbook</title>
+  
+  <!-- Подключение премиальных шрифтов -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Подключение иконок Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Подключение Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+            serif:['Cormorant Garamond', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Кастомные стили для анимаций появления (Fade Up) -->
+  <style>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-200 { transition-delay: 0.2s; }
+  </style>
+</head>
+<body class="min-h-screen bg-[#f4f7f4] text-[#122218] selection:bg-[#1f3828] selection:text-white font-sans overflow-x-hidden">
+
+  <!-- Премиальные эффекты на фоне -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-[#e3eae3] blur-[100px] opacity-70"></div>
+    <div class="absolute top-[20%] right-[-5%] w-[30%] h-[50%] rounded-full bg-[#ebece8] blur-[120px] opacity-60"></div>
+  </div>
+
+  <div class="relative z-10">
+    <!-- Шапка (Header) -->
+    <header class="max-w-7xl mx-auto px-6 md:px-10 py-8 flex items-center justify-between border-b border-[#e4ebe4]/50">
+      <div class="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#1f3828]">
+        Marriage Restoration
+      </div>
+      <nav class="hidden md:flex items-center gap-10 text-[13px] font-medium tracking-[0.05em] text-[#5a6b60]">
+        <a href="#inside" class="hover:text-[#b49f7a] transition-colors">What's Inside</a>
+        <a href="#reviews" class="hover:text-[#b49f7a] transition-colors">Reviews</a>
+        <a href="#faq" class="hover:text-[#b49f7a] transition-colors">FAQ</a>
+      </nav>
+    </header>
+
+    <!-- Главный экран (Hero Section) -->
+    <section class="max-w-7xl mx-auto px-6 md:px-10 pt-16 pb-20 md:pb-32">
+      <div class="grid lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-center">
+        <!-- Текстовая часть -->
+        <div class="order-2 lg:order-1 fade-up">
+          <div class="inline-flex items-center gap-2 mb-6">
+            <span class="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#b49f7a]">
+              A Premium Relationship Guide
+            </span>
+          </div>
+          <h1 class="font-serif text-[#122218] text-5xl md:text-7xl lg:text-[85px] leading-[1.05] tracking-tight">
+            Marriage <br />
+            <span class="italic text-[#1f3828] font-medium">Restoration</span> <br />
+            Playbook
+          </h1>
+          <p class="mt-8 max-w-xl text-lg md:text-xl leading-relaxed text-[#4a5850] font-light">
+            A practical digital guide for women ready to rebuild connection, restore trust, and move through marriage challenges with more calm, clarity, and self-respect.
+          </p>
+
+          <div class="mt-10 grid sm:grid-cols-2 gap-4 max-w-xl">
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full border border-[#b49f7a] bg-[#b49f7a]/10">
+                <i data-lucide="check" class="w-3 h-3 text-[#b49f7a]"></i>
+              </div>
+              <span class="text-[#3a4a40] text-sm font-medium tracking-wide">Rebuild emotional connection</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full border border-[#b49f7a] bg-[#b49f7a]/10">
+                <i data-lucide="check" class="w-3 h-3 text-[#b49f7a]"></i>
+              </div>
+              <span class="text-[#3a4a40] text-sm font-medium tracking-wide">Restore trust step by step</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full border border-[#b49f7a] bg-[#b49f7a]/10">
+                <i data-lucide="check" class="w-3 h-3 text-[#b49f7a]"></i>
+              </div>
+              <span class="text-[#3a4a40] text-sm font-medium tracking-wide">Guided reflection prompts</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 flex items-center justify-center w-6 h-6 rounded-full border border-[#b49f7a] bg-[#b49f7a]/10">
+                <i data-lucide="check" class="w-3 h-3 text-[#b49f7a]"></i>
+              </div>
+              <span class="text-[#3a4a40] text-sm font-medium tracking-wide">Practical healing tools</span>
+            </div>
+          </div>
+
+          <div class="mt-12 flex flex-col sm:flex-row sm:items-center gap-8">
+            <a href="https://app.lava.top/products/0183fa83-a1ca-4287-8e05-3d20589dfe02" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-center gap-3 rounded-none bg-[#1f3828] px-10 py-5 text-white text-[13px] font-semibold uppercase tracking-[0.2em] hover:bg-[#15291d] transition-colors cursor-pointer">
+              Get Instant Access
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+            
+            <div class="flex flex-col justify-center">
+              <span class="font-serif text-[#122218] text-5xl md:text-[56px] font-medium leading-none tracking-tight lining-nums">$29.90</span>
+              <span class="mt-2 text-[#8b9c90] text-[10px] font-semibold uppercase tracking-[0.25em]">Instant Download</span>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-[11px] tracking-[0.1em] text-[#708276] uppercase font-medium">
+            <div class="flex items-center gap-2">
+              <i data-lucide="lock" class="w-3.5 h-3.5 text-[#b49f7a]"></i> Secured via Lava.top
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="credit-card" class="w-3.5 h-3.5 text-[#b49f7a]"></i> PayPal Accepted
+            </div>
+          </div>
+        </div>
+
+        <!-- Изображение -->
+        <div class="order-1 lg:order-2 fade-up delay-200">
+          <div class="relative group perspective-[1000px]">
+            <div class="absolute inset-0 bg-[#b49f7a] rounded-[20px] blur-[60px] opacity-20 group-hover:opacity-30 transition-opacity duration-700"></div>
+            
+            <!-- ПРЯМАЯ ССЫЛКА НА ВАШУ КАРТИНКУ С POSTIMAGES -->
+            <img
+              src="https://i.postimg.cc/gkmfjyKj/Promotional-graphic-for-202604231446.jpg"
+              alt="Marriage Restoration Playbook"
+              class="relative w-full h-auto rounded-[20px] border border-white/40 shadow-[0_30px_60px_rgba(18,34,24,0.15)] object-cover"
+            />
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Боли аудитории -->
+    <section class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 fade-up">
+      <div class="max-w-3xl mb-12 md:mb-16">
+        <div class="inline-flex items-center gap-2 mb-6">
+          <span class="h-[1px] w-8 bg-[#b49f7a]"></span>
+          <span class="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#b49f7a]">Sound familiar?</span>
+        </div>
+        <h2 class="font-serif text-[#122218] text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
+          Something shifted — and you feel it.
+        </h2>
+        <p class="mt-6 text-[#4a5850] text-lg md:text-xl leading-relaxed font-light">
+          This playbook is designed for women who still care deeply about their marriage, but feel stuck between emotional distance, confusion, and the fear of doing the wrong thing next.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border border-[#e4ebe4] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(18,34,24,0.04)] hover:shadow-[0_20px_40px_rgb(18,34,24,0.08)] transition-shadow duration-500">
+          <div class="flex items-start gap-5">
+            <div class="mt-1 rounded-full bg-[#f4f7f4] p-3 text-[#b49f7a]">
+              <i data-lucide="heart" class="w-5 h-5"></i>
+            </div>
+            <p class="text-[#3a4a40] text-lg leading-relaxed font-light">You feel emotionally disconnected, even though you still care deeply about your marriage.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-[#e4ebe4] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(18,34,24,0.04)] hover:shadow-[0_20px_40px_rgb(18,34,24,0.08)] transition-shadow duration-500">
+          <div class="flex items-start gap-5">
+            <div class="mt-1 rounded-full bg-[#f4f7f4] p-3 text-[#b49f7a]">
+              <i data-lucide="heart" class="w-5 h-5"></i>
+            </div>
+            <p class="text-[#3a4a40] text-lg leading-relaxed font-light">You know something changed, but cannot fully explain when or why it started slipping.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-[#e4ebe4] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(18,34,24,0.04)] hover:shadow-[0_20px_40px_rgb(18,34,24,0.08)] transition-shadow duration-500">
+          <div class="flex items-start gap-5">
+            <div class="mt-1 rounded-full bg-[#f4f7f4] p-3 text-[#b49f7a]">
+              <i data-lucide="heart" class="w-5 h-5"></i>
+            </div>
+            <p class="text-[#3a4a40] text-lg leading-relaxed font-light">You want to repair the relationship without more blame, panic, or emotional chasing.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-[#e4ebe4] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(18,34,24,0.04)] hover:shadow-[0_20px_40px_rgb(18,34,24,0.08)] transition-shadow duration-500">
+          <div class="flex items-start gap-5">
+            <div class="mt-1 rounded-full bg-[#f4f7f4] p-3 text-[#b49f7a]">
+              <i data-lucide="heart" class="w-5 h-5"></i>
+            </div>
+            <p class="text-[#3a4a40] text-lg leading-relaxed font-light">You are trying to hold the marriage together while also protecting your own peace and dignity.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 p-10 md:p-14 bg-[#1f3828] rounded-2xl text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 mix-blend-overlay"></div>
+        <p class="relative z-10 font-serif text-3xl md:text-4xl leading-snug text-[#f4f7f4] max-w-4xl mx-auto italic">
+          "You are not trying to become colder. You are trying to become steadier, wiser, and more effective in how you love, communicate, and repair."
+        </p>
+      </div>
+    </section>
+
+    <!-- Цифры -->
+    <div class="border-y border-[#e4ebe4]/60 bg-white/40 backdrop-blur-md py-14 fade-up">
+      <div class="max-w-6xl mx-auto px-6 md:px-10 grid grid-cols-2 md:grid-cols-4 gap-10 text-center divide-x divide-[#e4ebe4]">
+        <div class="border-l-0">
+          <div class="font-serif text-5xl md:text-[64px] text-[#1f3828] font-medium lining-nums">20</div>
+          <div class="mt-4 text-[10px] font-semibold uppercase tracking-[0.25em] text-[#8b9c90]">Beautiful Pages</div>
+        </div>
+        <div>
+          <div class="font-serif text-5xl md:text-[64px] text-[#1f3828] font-medium lining-nums">6</div>
+          <div class="mt-4 text-[10px] font-semibold uppercase tracking-[0.25em] text-[#8b9c90]">Core Sections</div>
+        </div>
+        <div>
+          <div class="font-serif text-5xl md:text-[64px] text-[#1f3828] font-medium">Daily</div>
+          <div class="mt-4 text-[10px] font-semibold uppercase tracking-[0.25em] text-[#8b9c90]">Healing Tools</div>
+        </div>
+        <div>
+          <div class="font-serif text-5xl md:text-[64px] text-[#1f3828] font-medium">Instant</div>
+          <div class="mt-4 text-[10px] font-semibold uppercase tracking-[0.25em] text-[#8b9c90]">Digital Access</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Что внутри -->
+    <section id="inside" class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 fade-up">
+      <div class="max-w-3xl mb-12 md:mb-16">
+        <div class="inline-flex items-center gap-2 mb-6">
+          <span class="h-[1px] w-8 bg-[#b49f7a]"></span>
+          <span class="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#b49f7a]">What’s inside</span>
+        </div>
+        <h2 class="font-serif text-[#122218] text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
+          A complete relationship reset system.
+        </h2>
+        <p class="mt-6 text-[#4a5850] text-lg md:text-xl leading-relaxed font-light">
+          Inside the playbook, women get a structured, supportive framework that helps them think more clearly, communicate better, and move toward healing one calm step at a time.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-[#e4ebe4] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(18,34,24,0.04)] hover:shadow-[0_20px_40px_rgb(18,34,24,0.08)] transition-all duration-500 group relative overflow-hidden">
+          <div class="absolute top-0 right-0 p-8 text-[120px] font-serif leading-none text-[#f4f7f4] opacity-50 group-hover:scale-110 transition-transform duration-500 z-0 lining-nums">01</div>
+          <div class="relative z-10">
+            <h3 class="font-serif text-3xl text-[#122218] font-medium">Emotional stabilization</h3>
+            <p class="mt-4 text-[#5a6b60] leading-relaxed font-light">Simple guidance that helps you slow down reactivity and approach hard moments with more clarity.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-[#e4ebe4] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(18,34,24,0.04)] hover:shadow-[0_20px_40px_rgb(18,34,24,0.08)] transition-all duration-500 group relative overflow-hidden">
+          <div class="absolute top-0 right-0 p-8 text-[120px] font-serif leading-none text-[#f4f7f4] opacity-50 group-hover:scale-110 transition-transform duration-500 z-0 lining-nums">02</div>
+          <div class="relative z-10">
+            <h3 class="font-serif text-3xl text-[#122218] font-medium">Communication without blame</h3>
+            <p class="mt-4 text-[#5a6b60] leading-relaxed font-light">Practical ways to say what is true without pressure, accusation, or emotional chasing.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-[#e4ebe4] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(18,34,24,0.04)] hover:shadow-[0_20px_40px_rgb(18,34,24,0.08)] transition-all duration-500 group relative overflow-hidden">
+          <div class="absolute top-0 right-0 p-8 text-[120px] font-serif leading-none text-[#f4f7f4] opacity-50 group-hover:scale-110 transition-transform duration-500 z-0 lining-nums">03</div>
+          <div class="relative z-10">
+            <h3 class="font-serif text-3xl text-[#122218] font-medium">Trust rebuilding frameworks</h3>
+            <p class="mt-4 text-[#5a6b60] leading-relaxed font-light">Clear structure for consistency, emotional safety, respect, and realistic healing over time.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-[#e4ebe4] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(18,34,24,0.04)] hover:shadow-[0_20px_40px_rgb(18,34,24,0.08)] transition-all duration-500 group relative overflow-hidden">
+          <div class="absolute top-0 right-0 p-8 text-[120px] font-serif leading-none text-[#f4f7f4] opacity-50 group-hover:scale-110 transition-transform duration-500 z-0 lining-nums">04</div>
+          <div class="relative z-10">
+            <h3 class="font-serif text-3xl text-[#122218] font-medium">Reflection prompts</h3>
+            <p class="mt-4 text-[#5a6b60] leading-relaxed font-light">Thoughtful questions that help you understand patterns, needs, fears, and wiser next steps.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-[#e4ebe4] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(18,34,24,0.04)] hover:shadow-[0_20px_40px_rgb(18,34,24,0.08)] transition-all duration-500 group relative overflow-hidden">
+          <div class="absolute top-0 right-0 p-8 text-[120px] font-serif leading-none text-[#f4f7f4] opacity-50 group-hover:scale-110 transition-transform duration-500 z-0 lining-nums">05</div>
+          <div class="relative z-10">
+            <h3 class="font-serif text-3xl text-[#122218] font-medium">Daily & weekly support</h3>
+            <p class="mt-4 text-[#5a6b60] leading-relaxed font-light">Simple progress pages that make healing feel structured instead of overwhelming.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-[#e4ebe4] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(18,34,24,0.04)] hover:shadow-[0_20px_40px_rgb(18,34,24,0.08)] transition-all duration-500 group relative overflow-hidden">
+          <div class="absolute top-0 right-0 p-8 text-[120px] font-serif leading-none text-[#f4f7f4] opacity-50 group-hover:scale-110 transition-transform duration-500 z-0 lining-nums">06</div>
+          <div class="relative z-10">
+            <h3 class="font-serif text-3xl text-[#122218] font-medium">Step-by-step plan</h3>
+            <p class="mt-4 text-[#5a6b60] leading-relaxed font-light">A calm restoration roadmap that helps you move forward with more self-respect and steadiness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Shift (До/После) -->
+    <section class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 fade-up">
+      <div class="max-w-3xl mb-12 md:mb-16">
+        <div class="inline-flex items-center gap-2 mb-6">
+          <span class="h-[1px] w-8 bg-[#b49f7a]"></span>
+          <span class="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#b49f7a]">The shift</span>
+        </div>
+        <h2 class="font-serif text-[#122218] text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
+          From emotional overload to wiser action.
+        </h2>
+        <p class="mt-6 text-[#4a5850] text-lg md:text-xl leading-relaxed font-light">
+          This guide is not about forcing a perfect outcome. It is about helping you respond from a place that protects your dignity while creating more room for healing.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="rounded-2xl border border-[#e4ebe4] p-10 md:p-12 shadow-[0_8px_30px_rgb(18,34,24,0.04)] bg-gradient-to-br from-white to-[#f9faf9]">
+          <div class="text-[10px] font-bold uppercase tracking-[0.25em] text-[#8b9c90] mb-8">The Drift (Before)</div>
+          <ul class="space-y-6 text-[#5a6b60] text-lg font-light">
+            <li class="flex gap-4 items-start">
+              <span class="text-[#b49f7a] text-2xl leading-none">×</span>
+              <span>Reacting from fear, pressure, or desperation</span>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="text-[#b49f7a] text-2xl leading-none">×</span>
+              <span>Repeating the same conversations without progress</span>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="text-[#b49f7a] text-2xl leading-none">×</span>
+              <span>Confusing emotional intensity with real repair</span>
+            </li>
+            <li class="flex gap-4 items-start">
+              <span class="text-[#b49f7a] text-2xl leading-none">×</span>
+              <span>Feeling responsible for fixing everything alone</span>
+            </li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-none p-10 md:p-12 shadow-[0_8px_30px_rgb(18,34,24,0.04)] bg-[#1f3828] text-white">
+          <div class="text-[10px] font-bold uppercase tracking-[0.25em] text-[#b49f7a] mb-8">The Restoration (After)</div>
+          <ul class="space-y-6 text-[#d2dbd4] text-lg font-light">
+            <li class="flex gap-4 items-start">
+              <i data-lucide="check" class="w-5 h-5 text-[#b49f7a] mt-1 shrink-0"></i>
+              <span>Knowing how to calm yourself before hard conversations</span>
+            </li>
+            <li class="flex gap-4 items-start">
+              <i data-lucide="check" class="w-5 h-5 text-[#b49f7a] mt-1 shrink-0"></i>
+              <span>Communicating pain without blame or chasing</span>
+            </li>
+            <li class="flex gap-4 items-start">
+              <i data-lucide="check" class="w-5 h-5 text-[#b49f7a] mt-1 shrink-0"></i>
+              <span>Understanding how trust is rebuilt step by step</span>
+            </li>
+            <li class="flex gap-4 items-start">
+              <i data-lucide="check" class="w-5 h-5 text-[#b49f7a] mt-1 shrink-0"></i>
+              <span>Moving forward with more clarity and self-respect</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 fade-up">
+      <div class="max-w-3xl mb-12 md:mb-16">
+        <div class="inline-flex items-center gap-2 mb-6">
+          <span class="h-[1px] w-8 bg-[#b49f7a]"></span>
+          <span class="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#b49f7a]">Loved by readers</span>
+        </div>
+        <h2 class="font-serif text-[#122218] text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
+          What women are saying
+        </h2>
+        <p class="mt-6 text-[#4a5850] text-lg md:text-xl leading-relaxed font-light">
+          A premium guide only works if it also feels calm, useful, and genuinely supportive.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border border-[#e4ebe4] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(18,34,24,0.04)] flex flex-col justify-between">
+          <div>
+            <div class="flex gap-1.5 text-[#b49f7a] mb-6">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-[#3a4a40] leading-relaxed text-lg italic">"This felt calmer and more useful than anything else I had read. It helped me stop reacting from panic and start thinking clearly again."</p>
+          </div>
+          <div class="mt-8 pt-6 border-t border-[#f0f4f0]">
+            <div class="font-serif text-2xl text-[#122218]">Emily R.</div>
+            <div class="text-[11px] uppercase tracking-wider text-[#8b9c90] mt-1">Verified Reader</div>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-[#e4ebe4] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(18,34,24,0.04)] flex flex-col justify-between">
+          <div>
+            <div class="flex gap-1.5 text-[#b49f7a] mb-6">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-[#3a4a40] leading-relaxed text-lg italic">"Beautifully written and actually practical. I loved that it felt supportive without sounding vague or overly soft."</p>
+          </div>
+          <div class="mt-8 pt-6 border-t border-[#f0f4f0]">
+            <div class="font-serif text-2xl text-[#122218]">Lauren M.</div>
+            <div class="text-[11px] uppercase tracking-wider text-[#8b9c90] mt-1">Verified Reader</div>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-[#e4ebe4] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(18,34,24,0.04)] flex flex-col justify-between">
+          <div>
+            <div class="flex gap-1.5 text-[#b49f7a] mb-6">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-[#3a4a40] leading-relaxed text-lg italic">"The reflection prompts and communication pages were my favorite part. The whole guide feels premium and thoughtfully made."</p>
+          </div>
+          <div class="mt-8 pt-6 border-t border-[#f0f4f0]">
+            <div class="font-serif text-2xl text-[#122218]">Natalie J.</div>
+            <div class="text-[11px] uppercase tracking-wider text-[#8b9c90] mt-1">Verified Reader</div>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-[#e4ebe4] bg-white p-8 md:p-10 shadow-[0_8px_30px_rgb(18,34,24,0.04)] flex flex-col justify-between">
+          <div>
+            <div class="flex gap-1.5 text-[#b49f7a] mb-6">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-[#3a4a40] leading-relaxed text-lg italic">"It gave me language for what I was feeling and helped me slow down before making everything worse. I would absolutely recommend it."</p>
+          </div>
+          <div class="mt-8 pt-6 border-t border-[#f0f4f0]">
+            <div class="font-serif text-2xl text-[#122218]">Sophie T.</div>
+            <div class="text-[11px] uppercase tracking-wider text-[#8b9c90] mt-1">Verified Reader</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Фичи -->
+    <section class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 fade-up">
+      <div class="max-w-3xl mb-12 md:mb-16">
+        <div class="inline-flex items-center gap-2 mb-6">
+          <span class="h-[1px] w-8 bg-[#b49f7a]"></span>
+          <span class="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#b49f7a]">Why women choose this guide</span>
+        </div>
+        <h2 class="font-serif text-[#122218] text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
+          Practical, beautiful, and easy to follow.
+        </h2>
+        <p class="mt-6 text-[#4a5850] text-lg md:text-xl leading-relaxed font-light">
+          The design is soft and feminine, but the content is structured. It gives women something they can actually use instead of more vague relationship advice.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6">
+          <i data-lucide="shield" class="w-8 h-8 text-[#b49f7a] mb-6 stroke-[1.5]"></i>
+          <h3 class="font-serif text-3xl text-[#122218] mb-3 font-medium">Calm, not chaotic</h3>
+          <p class="text-[#5a6b60] leading-relaxed font-light">Built to help women move from pressure and panic toward steadier action.</p>
+        </div>
+        <div class="p-6">
+          <i data-lucide="message-circle-heart" class="w-8 h-8 text-[#b49f7a] mb-6 stroke-[1.5]"></i>
+          <h3 class="font-serif text-3xl text-[#122218] mb-3 font-medium">Practical, not vague</h3>
+          <p class="text-[#5a6b60] leading-relaxed font-light">You get usable communication tools and relationship frameworks.</p>
+        </div>
+        <div class="p-6">
+          <i data-lucide="heart" class="w-8 h-8 text-[#b49f7a] mb-6 stroke-[1.5]"></i>
+          <h3 class="font-serif text-3xl text-[#122218] mb-3 font-medium">Supportive</h3>
+          <p class="text-[#5a6b60] leading-relaxed font-light">Emotionally intelligent guidance without sounding cold or clinical.</p>
+        </div>
+        <div class="p-6">
+          <i data-lucide="book-open" class="w-8 h-8 text-[#b49f7a] mb-6 stroke-[1.5]"></i>
+          <h3 class="font-serif text-3xl text-[#122218] mb-3 font-medium">Premium Quality</h3>
+          <p class="text-[#5a6b60] leading-relaxed font-light">Designed like a polished playbook that feels valuable immediately.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Покупка (Buy Section) -->
+    <section id="buy" class="max-w-7xl mx-auto px-6 md:px-10 pb-20 md:pb-32 pt-0 fade-up">
+      <div class="max-w-4xl mx-auto">
+        <div class="rounded-3xl border border-[#e4ebe4] bg-white p-10 md:p-16 text-center shadow-[0_20px_60px_rgb(18,34,24,0.06)] relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-2 bg-[#b49f7a]"></div>
+          
+          <div class="inline-flex items-center gap-2 mb-8">
+            <span class="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#b49f7a]">
+              Instant Digital Access
+            </span>
+          </div>
+          
+          <h3 class="font-serif text-[#122218] text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
+            Marriage Restoration Playbook
+          </h3>
+          
+          <div class="mt-12 font-serif text-[#1f3828] text-6xl md:text-[80px] font-medium tracking-tight leading-none lining-nums">$29.90</div>
+          
+          <div class="mt-14 grid sm:grid-cols-2 gap-5 text-left max-w-2xl mx-auto">
+            <div class="flex items-center gap-4">
+              <i data-lucide="check" class="w-5 h-5 text-[#b49f7a]"></i>
+              <span class="text-[#4a5850] font-light">Premium 20-page PDF guide</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <i data-lucide="check" class="w-5 h-5 text-[#b49f7a]"></i>
+              <span class="text-[#4a5850] font-light">Reflection prompts and tools</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <i data-lucide="check" class="w-5 h-5 text-[#b49f7a]"></i>
+              <span class="text-[#4a5850] font-light">Trust & communication frameworks</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <i data-lucide="check" class="w-5 h-5 text-[#b49f7a]"></i>
+              <span class="text-[#4a5850] font-light">Daily and weekly progress pages</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <i data-lucide="check" class="w-5 h-5 text-[#b49f7a]"></i>
+              <span class="text-[#4a5850] font-light">Beautiful feminine premium design</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <i data-lucide="check" class="w-5 h-5 text-[#b49f7a]"></i>
+              <span class="text-[#4a5850] font-light">Instant digital delivery</span>
+            </div>
+          </div>
+          
+          <a href="https://app.lava.top/products/0183fa83-a1ca-4287-8e05-3d20589dfe02" target="_blank" rel="noopener noreferrer" class="mt-14 inline-flex items-center justify-center gap-3 rounded-none bg-[#1f3828] px-12 py-5 text-white text-[13px] font-semibold uppercase tracking-[0.2em] hover:bg-[#15291d] transition-all shadow-xl hover:shadow-2xl">
+            Purchase Playbook Now
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[11px] tracking-[0.1em] text-[#8b9c90] uppercase font-medium">
+            <div class="flex items-center gap-2">
+              <i data-lucide="lock" class="w-3.5 h-3.5 text-[#b49f7a]"></i> Secure Checkout via Lava.top
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="credit-card" class="w-3.5 h-3.5 text-[#b49f7a]"></i> PayPal Available
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-7xl mx-auto px-6 md:px-10 py-20 md:py-32 fade-up">
+      <div class="max-w-3xl mb-12 md:mb-16">
+        <div class="inline-flex items-center gap-2 mb-6">
+          <span class="h-[1px] w-8 bg-[#b49f7a]"></span>
+          <span class="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#b49f7a]">FAQ</span>
+        </div>
+        <h2 class="font-serif text-[#122218] text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight">
+          Common Questions
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div class="p-8 bg-white border border-[#e4ebe4] rounded-xl hover:border-[#b49f7a]/50 transition-colors">
+          <h3 class="font-serif text-3xl text-[#122218] mb-4 font-medium">What do I get after purchase?</h3>
+          <p class="text-[#5a6b60] leading-relaxed font-light">You receive the full Marriage Restoration Playbook as a digital PDF guide.</p>
+        </div>
+        <div class="p-8 bg-white border border-[#e4ebe4] rounded-xl hover:border-[#b49f7a]/50 transition-colors">
+          <h3 class="font-serif text-3xl text-[#122218] mb-4 font-medium">Who is this for?</h3>
+          <p class="text-[#5a6b60] leading-relaxed font-light">It is designed for women who want to rebuild connection, restore trust, and move through marriage difficulties with more clarity and steadiness.</p>
+        </div>
+        <div class="p-8 bg-white border border-[#e4ebe4] rounded-xl hover:border-[#b49f7a]/50 transition-colors">
+          <h3 class="font-serif text-3xl text-[#122218] mb-4 font-medium">Is this a physical product?</h3>
+          <p class="text-[#5a6b60] leading-relaxed font-light">No. This is a digital product delivered online.</p>
+        </div>
+        <div class="p-8 bg-white border border-[#e4ebe4] rounded-xl hover:border-[#b49f7a]/50 transition-colors">
+          <h3 class="font-serif text-3xl text-[#122218] mb-4 font-medium">How will payment work?</h3>
+          <p class="text-[#5a6b60] leading-relaxed font-light">The checkout button is prepared for Lava.top, and the page notes that PayPal is available at checkout.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Подвал (Footer) -->
+    <footer class="border-t border-[#e4ebe4] pt-16 pb-12 text-center">
+      <div class="max-w-7xl mx-auto px-6 md:px-10">
+        <h4 class="font-serif text-3xl text-[#122218] mb-8">Marriage Restoration Playbook</h4>
+        
+        <!-- Блок с юридическими ссылками -->
+        <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 mb-8 text-[11px] font-medium tracking-[0.1em] text-[#5a6b60] uppercase">
+          <a href="#" class="hover:text-[#b49f7a] transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-[#b49f7a] transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-[#b49f7a] transition-colors">Refund Policy</a>
+          <a href="#" class="hover:text-[#b49f7a] transition-colors">Contact</a>
+        </div>
+        
+        <p class="text-[11px] font-medium tracking-[0.15em] text-[#8b9c90] uppercase">
+          © 2026 • Premium Digital Guide
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Инициализация иконок и анимаций прокрутки -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      lucide.createIcons();
+
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.12
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-up').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>
